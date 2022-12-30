@@ -114,26 +114,31 @@ public class Calculator implements ActionListener{
         if(e.getSource() == decButton){
             textField.setText(textField.getText().concat("."));
         }
+        // addition button
         if(e.getSource() == addButton){
             num1 = Double.parseDouble(textField.getText());
             operator = '+';
             textField.setText("");
         }
+        // subtraction button
         if(e.getSource() == subButton){
             num1 = Double.parseDouble(textField.getText());
             operator = '-';
             textField.setText("");
         }
+        // multiplication button
         if(e.getSource() == mulButton){
             num1 = Double.parseDouble(textField.getText());
             operator = '*';
             textField.setText("");
         }
+        // division button
         if(e.getSource() == divButton){
             num1 = Double.parseDouble(textField.getText());
             operator = '/';
             textField.setText("");
         }
+        // equal button
         if(e.getSource() == equButton){
             num2 = Double.parseDouble(textField.getText());
             switch(operator){
@@ -153,9 +158,11 @@ public class Calculator implements ActionListener{
             textField.setText(String.valueOf(result));
             num1 = result;
         }
+        // clear button
         if(e.getSource() == clrButton){
             textField.setText("");
         }
+        // delete button
         if(e.getSource() == delButton){
             String string = textField.getText();
             textField.setText("");
